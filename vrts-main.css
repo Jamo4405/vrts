@@ -1,0 +1,126 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw;
+    padding-top: 4vw;
+}
+
+::selection {
+    background-color: #aeefff;
+    color: black;
+}
+
+.main-section {
+    display: flex;
+    width: 100%;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 3vw;
+}
+
+.left-section {
+    border: none;
+    padding-right: 7vw;
+}
+
+.right-section {
+}
+
+.normal-large {
+    font-size: 4.5vw;
+}
+
+.bold-large {
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+    font-size: 5.5vw;
+    background: conic-gradient(
+        from 0deg,
+        #00006A 11%,
+        #7979FF 29%,
+        #3434FF 50%,
+        #0000FC 75%,
+        #0000B2 86%  
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.bar-code {
+    font-family: "Libre Barcode 39", system-ui;
+    font-size: 4.5vw;
+}
+
+.small-text-container {
+    padding-bottom: 1vw
+}
+
+.normal-small {
+    font-size: 2vw;
+}
+.bold-small {
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+    font-size: 2vw;
+    background: conic-gradient(
+        from 0deg,
+        #7979FF 17%,
+        #3434FF 50%,
+        #0000FC 75%,
+        #0000B2 86%  
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 850px) {
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        width: 100vw;
+    }
+    
+    .main-section {
+        flex-direction: column;
+    }
+
+    .left-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-section {
+        display: flex; /* Enable flexbox */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+    
+
+    .text-container {
+        text-align: center;
+    }
+
+    .small-text-container {
+        text-align: center;
+        padding-bottom: 6vw;    
+    }
+
+    .shiny-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,226 @@
+
+html {
+    background-color: black;
+    color: white;
+    font-family: "Inter", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: -1px; 
+    width: 101vw; 
+    justify-content: center;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+    border: 1px solid white;
+    height: 9.4vh;
+}
+
+.menu-item {
+    position: relative; /* Needed for positioning the pseudo-element */
+    display: inline-block; /* Ensures the text takes up only as much space as needed */
+    cursor: pointer;
+    font-size: 2.4vw;
+    display: flex;
+    flex-direction: column; 
+    justify-content: left;
+    margin: 1vh 0;
+}
+
+.menu-item::after {
+    content: ''; /* Empty content for the underline */
+    position: absolute;
+    bottom: 0; /* Position the underline at the bottom of the text */
+    left: 0;
+    width: 0%; /* Initially, the underline is hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.nav-text {
+    position: relative; /* Needed for positioning the pseudo-element */
+    display: inline-block; /* Ensures the text takes up only as much space as needed */
+    cursor: pointer;
+}
+
+.nav-text::after {
+    content: ''; /* Empty content for the underline */
+    position: absolute;
+    bottom: 0; /* Position the underline at the bottom of the text */
+    left: 0;
+    width: 0%; /* Initially, the underline is hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-text:hover::after {
+    width: 100%;
+}
+
+.navbar-left {
+    width: 15vw;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.the-logo {
+    width: 2.2vw;
+}
+
+.logo-name {
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+    padding-top: 0.3vw;
+    font-size: 2vw;
+}
+
+.navbar-center {
+    width: 65vw;
+    flex-grow: 1;
+    font-size: 1.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.navbar-right {
+    width: 85px;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-not-active {
+    position: fixed;
+    top: 9.4vh;
+    border: 1px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: black;
+    width: 100%;
+    height: 70vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.menu-div{
+    border: 1px solid rgb(255, 255, 255);
+    border-left: none;
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.line-div-text {
+    border: 1px solid rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-div-text-in-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    padding: 5vw;
+}
+
+.header-active {
+    display: flex;
+}
+
+.dynamic-container {
+    margin-left: 22.7vw;
+}
+
+.menu-title {
+    font-size: 1.5vw;
+    color: #ffffffcb;
+    display: flex;
+    flex-direction: column; 
+    justify-content: left;
+    margin: 1vh 0;
+}
+
+
+@media (max-width: 850px) {
+    .navbar-left, .navbar-center, .navbar-right {
+        height: 9vw;
+        border: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-right {
+        width: 10vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-name {
+        font-size: 24px;
+    }
+
+    .the-logo {
+        height: 26px;
+        width: 26px;
+        margin-left: 30px;
+    }
+
+    .navbar-left {
+        width: 25vw;
+    }
+
+    .navbar-center {
+        width: 65vw;
+        display: none;
+    }
+
+    .header-active {
+        position: fixed;
+        top: 9vw;
+        border: 1px solid white;
+        background-color: black;
+        width: 100%;
+        height: 70vh;
+        z-index: 1;
+    }
+
+}
+
