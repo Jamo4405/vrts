@@ -177,12 +177,16 @@ function menuOnPhone() {
 }
 
 function initializeMenu() {
-    if (window.innerWidth > 375) {
+    if (window.innerWidth > 550) {
         menuPopUp();
     } else {
         menuOnPhone();
     }
 }
+
+document.addEventListener('DOMContentLoaded', initializeMenu);
+
+window.addEventListener('resize', initializeMenu);
 
 function handleMenuClicks() {
     const menuItems = document.querySelectorAll('.menu-item');
@@ -198,21 +202,17 @@ function handleMenuClicks() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 550) {
         handleMenuClicks();
     }
 });
 
 window.addEventListener('resize', () => {
     const menuItems = document.querySelectorAll('.menu-item');
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 550) {
         handleMenuClicks();
     } else {
 
         menuItems.forEach(item => item.classList.remove('active'));
     }
 });
-
-document.addEventListener('DOMContentLoaded', initializeMenu);
-
-window.addEventListener('resize', initializeMenu);
