@@ -201,7 +201,7 @@ body {
     border-left: none;
     border-right: none;
     background-color: black;
-    width: 100%;
+    width: 100vw;
     height: 70vh;
     z-index: 1;
     display: flex;
@@ -214,7 +214,13 @@ body {
     display: flex;
 }
 
+.menu-block-1 {
+    margin-left: 13vw;
+}
 
+.menu-block-3 {
+    margin-right: 13vw;
+}
 
 @media (max-width: 850px) {
     .navbar-left, .navbar-center, .navbar-right {
@@ -265,6 +271,10 @@ body {
 
 @media (max-width: 550px) {
 
+    .navbar {
+        height: 10vh;
+    }
+    
     .the-logo {
         padding: 10px 0 0 10px;
     }
@@ -285,6 +295,27 @@ body {
 
     .menu-cross {
         width: 25px;
+    }
+
+    .menu-item {
+        font-size: 20px
+    }
+
+    .menu-title {
+        font-size: 15px
+    }
+
+    .menu-block-1 {
+        margin-top: 4vh;
+        margin-left: 5vw;
+    }
+    
+    .menu-block-3 {
+        margin-right: 5vw;
+    }
+
+    .main-menu-hidden {
+        top: 9vh;
     }
 
 }

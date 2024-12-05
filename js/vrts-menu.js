@@ -42,7 +42,6 @@ function menuPopUp() {
         element.addEventListener('mouseover', () => {
             const menuItem = element.textContent.trim();
 
-            // Hide main menu if it's open
             if (isMainMenuVisible) {
                 mainMenu.classList.remove('main-menu-appear');
                 isMainMenuVisible = false;
@@ -82,7 +81,7 @@ function menuPopUp() {
     });
 
     menuIcon.addEventListener('mouseover', () => {
-        // Hide other menus if they're open
+
         if (isMenuVisible) {
             header.classList.remove('header-active');
             theMenu.innerHTML = '';
@@ -94,9 +93,8 @@ function menuPopUp() {
         isMainMenuVisible = true;
     });
 
-    // Use delegation to handle mouseout for main menu
     mainMenu.addEventListener('mouseout', (event) => {
-        // Check if the mouse has left the entire main menu
+
         if (!mainMenu.contains(event.relatedTarget) && 
             !navbar.matches(':hover') && 
             !header.matches(':hover') && 
@@ -121,7 +119,6 @@ function menuPopUp() {
         }
     });
 
-    // Global reset for menus
     document.addEventListener('mouseover', (event) => {
         const isInMenuArea = 
             navbar.contains(event.target) || 
@@ -130,7 +127,7 @@ function menuPopUp() {
             menuIcon.contains(event.target);
 
         if (!isInMenuArea) {
-            // Reset all menus
+
             header.classList.remove('header-active');
             theMenu.innerHTML = '';
             menuText.innerHTML = '';
@@ -159,4 +156,34 @@ function menuPopUp() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', menuPopUp);
+function menuOnPhone() {
+
+    const phoneMenu = document.querySelector('.menu-cross')
+    const mainMenu = document.querySelector('.main-menu-hidden');
+
+    let tick = 0;
+
+    phoneMenu.addEventListener('click', () => {
+        if (tick % 2 === 0) {
+            mainMenu.classList.add('main-menu-appear')
+            phoneMenu.classList.add('menu-cross-rotate');
+            tick++
+        } else if (tick % 2 !== 0) {
+            mainMenu.classList.remove('main-menu-appear')
+            phoneMenu.classList.remove('menu-cross-rotate');
+            tick++
+        }
+    })
+}
+
+function initializeMenu() {
+    if (window.innerWidth > 550) {
+        menuPopUp();
+    } else {
+        menuOnPhone();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initializeMenu);
+
+window.addEventListener('resize', initializeMenu);
