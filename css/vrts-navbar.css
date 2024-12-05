@@ -118,13 +118,11 @@ body {
 }
 
 .menu-cross {
-    transition: transform 0.4s ease;
-    cursor: pointer;
+    transition: transform 0.4s ease !important;
 }
 
 .menu-cross-rotate {
-    transform: rotate(45deg);
-    cursor: pointer;
+    transform: rotate(45deg) !important;
 }
 
 
