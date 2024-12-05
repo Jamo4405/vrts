@@ -32,12 +32,21 @@ function menuPopUp() {
     const menuText = document.querySelector('.line-div-text');
     const header = document.querySelector('.header-not-active');
     const navbar = document.querySelector('.navbar');
+    const menuIcon = document.querySelector('.menu-cross');
+    const mainMenu = document.querySelector('.main-menu-hidden');
 
     let isMenuVisible = false;
+    let isMainMenuVisible = false;
 
     navbarElements.forEach(element => {
         element.addEventListener('mouseover', () => {
             const menuItem = element.textContent.trim();
+
+            // Hide main menu if it's open
+            if (isMainMenuVisible) {
+                mainMenu.classList.remove('main-menu-appear');
+                isMainMenuVisible = false;
+            }
 
             if (menuInfo[menuItem]) {
                 theMenu.innerHTML = '';
@@ -63,7 +72,6 @@ function menuPopUp() {
         });
 
         element.addEventListener('mouseout', () => {
-
             if (!navbar.matches(':hover') && !header.matches(':hover')) {
                 header.classList.remove('header-active');
                 theMenu.innerHTML = '';
@@ -73,15 +81,62 @@ function menuPopUp() {
         });
     });
 
+    menuIcon.addEventListener('mouseover', () => {
+        // Hide other menus if they're open
+        if (isMenuVisible) {
+            header.classList.remove('header-active');
+            theMenu.innerHTML = '';
+            menuText.innerHTML = '';
+            isMenuVisible = false;
+        }
+
+        mainMenu.classList.add('main-menu-appear');
+        isMainMenuVisible = true;
+    });
+
+    // Use delegation to handle mouseout for main menu
+    mainMenu.addEventListener('mouseout', (event) => {
+        // Check if the mouse has left the entire main menu
+        if (!mainMenu.contains(event.relatedTarget) && 
+            !navbar.matches(':hover') && 
+            !header.matches(':hover') && 
+            !menuIcon.matches(':hover')) {
+            mainMenu.classList.remove('main-menu-appear');
+            isMainMenuVisible = false;
+        }
+    });
+
     navbar.addEventListener('mouseover', () => {
         if (isMenuVisible) {
             header.classList.add('header-active');
+        }
+        if (isMainMenuVisible) {
+            mainMenu.classList.add('main-menu-appear');
         }
     });
 
     header.addEventListener('mouseover', () => {
         if (isMenuVisible) {
             header.classList.add('header-active');
+        }
+    });
+
+    // Global reset for menus
+    document.addEventListener('mouseover', (event) => {
+        const isInMenuArea = 
+            navbar.contains(event.target) || 
+            header.contains(event.target) || 
+            mainMenu.contains(event.target) || 
+            menuIcon.contains(event.target);
+
+        if (!isInMenuArea) {
+            // Reset all menus
+            header.classList.remove('header-active');
+            theMenu.innerHTML = '';
+            menuText.innerHTML = '';
+            mainMenu.classList.remove('main-menu-appear');
+            isMenuVisible = false;
+            isMainMenuVisible = false;
         }
     });
 
@@ -105,10 +160,3 @@ function menuPopUp() {
 }
 
 document.addEventListener('DOMContentLoaded', menuPopUp);
-
-
-
-
-
-
-

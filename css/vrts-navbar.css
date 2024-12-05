@@ -194,6 +194,26 @@ body {
     transition: transform 1s ease;
 }
 
+.main-menu-hidden {
+    position: fixed;
+    top: 9.4vh;
+    border: 1px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: black;
+    width: 100%;
+    height: 70vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.main-menu-appear {
+    display: flex;
+}
+
 
 
 @media (max-width: 850px) {
