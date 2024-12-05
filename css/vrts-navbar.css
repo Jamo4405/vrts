@@ -119,10 +119,12 @@ body {
 
 .menu-cross {
     transition: transform 0.4s ease !important;
+    cursor: pointer;
 }
 
 .menu-cross-rotate {
     transform: rotate(45deg) !important;
+    cursor: pointer;
 }
 
 
