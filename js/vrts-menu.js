@@ -177,12 +177,41 @@ function menuOnPhone() {
 }
 
 function initializeMenu() {
-    if (window.innerWidth > 550) {
+    if (window.innerWidth > 375) {
         menuPopUp();
     } else {
         menuOnPhone();
     }
 }
+
+function handleMenuClicks() {
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+
+            menuItems.forEach(el => el.classList.remove('active'));
+
+            item.classList.add('active');
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth <= 375) {
+        handleMenuClicks();
+    }
+});
+
+window.addEventListener('resize', () => {
+    const menuItems = document.querySelectorAll('.menu-item');
+    if (window.innerWidth <= 375) {
+        handleMenuClicks();
+    } else {
+
+        menuItems.forEach(item => item.classList.remove('active'));
+    }
+});
 
 document.addEventListener('DOMContentLoaded', initializeMenu);
 

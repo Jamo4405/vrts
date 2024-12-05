@@ -12,6 +12,6 @@ function rotateCross() {
     });
 }
 
-if (window.innerWidth > 550) {
+if (window.innerWidth > 375) {
     document.addEventListener('DOMContentLoaded', rotateCross)
 }

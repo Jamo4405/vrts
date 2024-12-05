@@ -320,3 +320,25 @@ body {
 
 }
 
+@media (max-width: 375px) {
+    .menu-item {
+        font-size: 16px
+    }
+
+    .menu-title {
+        font-size: 12px
+    }
+
+    .menu-item:hover::after {
+        width: 0%;
+    }
+
+    .menu-item.active::after {
+        width: 100%;
+    }
+
+    .menu-item.active {
+        color: #ffffff;
+    }
+}
+
