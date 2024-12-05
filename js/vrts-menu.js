@@ -6,7 +6,7 @@ const menuInfo = {
             "<div class='menu-item digital'>Digital</div>", 
             "<div class='menu-item finance'>Finance</div>"
         ],
-        text: "We offer a trifecta of solutions to ensure anything can be verified—we are starting to build our solution for physical products first."
+        text: "We’re creating tools to make anything verifiable, starting with physical products. By tokenizing items on-chain, we enable anyone, anywhere to access information like ownership history, authenticity, warranties, and unique brand experiences."
     },
     "Our Tech": {
         title: "OUR TECH",
@@ -14,7 +14,7 @@ const menuInfo = {
             "<div class='menu-item blockchain'>Blockchain</div>", 
             "<div class='menu-item partners'>Partners</div>"
         ],
-        text: "Discover the tech powering our platform."
+        text: "We leverage hyper-scalable public and private blockchains, seamlessly integrated into the background. By eliminating front-end complexity, we deliver systems that are fully immutable and transparent."
     },
     "About Us": {
         title: "ABOUT US",
@@ -105,6 +105,8 @@ function menuPopUp() {
 }
 
 document.addEventListener('DOMContentLoaded', menuPopUp);
+
+
 
 
 

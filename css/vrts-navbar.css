@@ -29,9 +29,10 @@ body {
     height: 9.4vh;
 }
 
+
 .menu-item {
-    position: relative; /* Needed for positioning the pseudo-element */
-    display: inline-block; /* Ensures the text takes up only as much space as needed */
+    position: relative; 
+    display: inline-block;
     cursor: pointer;
     font-size: 2.4vw;
     display: flex;
@@ -41,12 +42,12 @@ body {
 }
 
 .menu-item::after {
-    content: ''; /* Empty content for the underline */
+    content: '';
     position: absolute;
-    bottom: 0; /* Position the underline at the bottom of the text */
+    bottom: 0;
     left: 0;
-    width: 0%; /* Initially, the underline is hidden */
-    height: 2px; /* Thickness of the underline */
+    width: 0%;
+    height: 2px;
     background-color: #ffffff;
     transition: width 0.3s ease;
 }
@@ -55,19 +56,20 @@ body {
     width: 100%;
 }
 
+
 .nav-text {
-    position: relative; /* Needed for positioning the pseudo-element */
-    display: inline-block; /* Ensures the text takes up only as much space as needed */
+    position: relative;
+    display: inline-block; 
     cursor: pointer;
 }
 
 .nav-text::after {
-    content: ''; /* Empty content for the underline */
+    content: '';
     position: absolute;
-    bottom: 0; /* Position the underline at the bottom of the text */
+    bottom: 0;
     left: 0;
-    width: 0%; /* Initially, the underline is hidden */
-    height: 2px; /* Thickness of the underline */
+    width: 0%;
+    height: 2px;
     background-color: #ffffff;
     transition: width 0.3s ease;
 }
@@ -174,6 +176,12 @@ body {
     justify-content: left;
     margin: 1vh 0;
 }
+
+.rotate-45 {
+    transform: rotate(45deg);
+    transition: transform 1s ease;
+}
+
 
 
 @media (max-width: 850px) {
