@@ -157,23 +157,22 @@ function menuPopUp() {
 }
 
 function menuOnPhone() {
-
-    const phoneMenu = document.querySelector('.menu-cross')
+    const phoneMenu = document.querySelector('.menu-cross');
     const mainMenu = document.querySelector('.main-menu-hidden');
 
-    let tick = 0;
+    let isMenuOpen = false;
 
     phoneMenu.addEventListener('click', () => {
-        if (tick % 2 === 0) {
-            mainMenu.classList.add('main-menu-appear')
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+            mainMenu.classList.add('main-menu-appear');
             phoneMenu.classList.add('menu-cross-rotate');
-            tick++
-        } else if (tick % 2 !== 0) {
-            mainMenu.classList.remove('main-menu-appear')
+        } else {
+            mainMenu.classList.remove('main-menu-appear');
             phoneMenu.classList.remove('menu-cross-rotate');
-            tick++
         }
-    })
+    });
 }
 
 function initializeMenu() {
