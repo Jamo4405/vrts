@@ -2,7 +2,7 @@ const menuInfo = {
     "Solutions": {
         title: "SOLUTIONS",
         content: [
-            "<div class='menu-item physical'>Physical</div>", 
+            "<a href='what-we-do.html' class='menu-link'><div class='menu-item physical'>Physical</div></a>", 
             "<div class='menu-item digital'>Digital</div>", 
             "<div class='menu-item finance'>Finance</div>"
         ],
