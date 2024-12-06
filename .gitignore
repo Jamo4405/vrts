@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# React specific
+npm-debug.log
+yarn-error.log
+
+# VSCode specific
+.vscode/
+
+# Log files
+*.log
