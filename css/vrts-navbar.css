@@ -224,7 +224,7 @@ body {
 
 @media (max-width: 850px) {
     .navbar-left, .navbar-center, .navbar-right {
-        height: 9vw;
+        height: 11vw;
         border: none;
     }
 

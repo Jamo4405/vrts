@@ -3,8 +3,9 @@ const menuInfo = {
         title: "SOLUTIONS",
         content: [
             "<a href='what-we-do.html' class='menu-link'><div class='menu-item physical'>Physical</div></a>", 
-            "<div class='menu-item digital'>Digital</div>", 
-            "<div class='menu-item finance'>Finance</div>"
+            "<a href='coming-soon.html' class='menu-link'><div class='menu-item digital'>Digital</div></a>" ,
+            "<a href='coming-soon.html' class='menu-link'><div class='menu-item finance'>Finance</div></a>"
+
         ],
         text: "We’re creating tools to make anything verifiable, starting with physical products. By tokenizing items on-chain, we enable anyone, anywhere to access information like ownership history, authenticity, warranties, and unique brand experiences."
     },
