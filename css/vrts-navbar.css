@@ -26,8 +26,11 @@ body {
 }
 
 .navbar-left, .navbar-center, .navbar-right {
-    border: 1px solid white;
     height: 9.4vh;
+}
+
+.with-border {
+    border: 1px solid white;
 }
 
 

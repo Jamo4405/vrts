@@ -1,8 +1,9 @@
-main {
+.grid-for-main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    height: 200%; 
     width: 100vw;
     padding-top: 4vw;
 
