@@ -65,6 +65,17 @@ body {
     position: relative;
     display: inline-block; 
     cursor: pointer;
+    background: conic-gradient(
+        from 0deg,
+        #b0b0ff 11%,
+        #e9e9ff 29%,
+        #9c9cd8 50%,
+        #c2c2ff 75%,
+        #b1b1fd 86%  
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-text::after {

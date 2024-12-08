@@ -1,3 +1,40 @@
+.no-arrow {
+    cursor: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8vw;
+    height: 3vw;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2vw;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.no-border {
+    width: 18vw;
+    height: 12vw;
+    padding-left: 2vw;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 1.25vw;
+    color:#ffffffd9;
+}
+
 .grid-for-main {
     display: block;
 }
@@ -20,7 +57,17 @@
     display: inline-block;
     opacity: 0.3; 
     transform: translateY(10px);
-    color: rgb(255, 255, 255);
+    background: conic-gradient(
+        from 0deg,
+        #CFDDE3 17%,
+        #e9e9ff 12%,
+        #c6d5f2 50%,
+        #babace 75%,
+        #d8fdff 86%  
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .intro {
@@ -35,9 +82,33 @@
      
 }
 
+.eu-badge {
+    max-width: 10%;
+    height: auto;
+    display: block; 
+}
+
+
+.eu-dpp-badge {
+    width: 20vw;
+    height: 4vw;
+    background-color: rgba(255, 255, 255, 0.885);
+    border-radius: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: 0.3;
+}
+
+.eu-text {
+    padding-left: 5%;
+}
+
 .middle {
     min-height: 100vh;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,3 +132,77 @@ body, html {
     align-items: center;
 }
 
+@media (max-width: 1200px) {
+
+    .inner-text {
+        font-size: 4vw;
+        padding: 0 7.5vw;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .eu-badge {
+        max-width: 10%;
+        height: auto;
+        display: block; 
+    }
+    
+    .eu-dpp-badge {
+        width: 250px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.885);
+        border-radius: 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .no-border {
+        width: 250px;
+        height: 100px;
+        padding-left: 2vw;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        font-size: 2vw;
+        color:#ffffffd9;
+    }
+
+    .inner-text {
+        font-size: 7vw;
+        padding: 0 7.5vw;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .eu-badge {
+        max-width: 10%;
+        height: auto;
+        display: block; 
+    }
+    
+    .eu-dpp-badge {
+        width: 200px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.885);
+        border-radius: 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        opacity: 0.3;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .eu-text {
+        padding-left: 3.5%;
+    }
+
+}

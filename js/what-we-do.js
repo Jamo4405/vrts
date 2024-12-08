@@ -22,6 +22,17 @@ gsap.to('.inner-text span', {
     }
 });
 
+gsap.to('.eu-dpp-badge', {
+    opacity: 1, 
+    y: 0, 
+    scrollTrigger: {
+        trigger: '.intro',
+        start: 'top top',
+        end: '90% top',
+        scrub: true 
+    }
+});
+
 ScrollTrigger.create({
     trigger: '.intro', 
     start: 'top top',
@@ -87,5 +98,44 @@ gsap.to('.navbar-right', {
         markers: false
     }
 });
+
+const cursor = document.querySelector('.custom-cursor');
+const introSection = document.querySelector('.intro');
+const imageSection = document.querySelector('.intro-image')
+
+document.addEventListener('mousemove', (e) => {
+    gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.1,
+    });
+});
+
+introSection.addEventListener('mouseenter', () => {
+    cursor.textContent = '↓';
+    gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
+    introSection.classList.add('no-arrow')
+
+});
+
+introSection.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
+    introSection.classList.remove('no-arrow')
+
+});
+
+imageSection.addEventListener('mouseenter', () => {
+    cursor.textContent = 'Our solutions seamlessly integrate with any product, from clothing and pharmaceuticals to furniture.';
+    cursor.classList.add('no-border')
+    introSection.classList.add('no-arrow')
+    gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
+});
+
+imageSection.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
+    cursor.classList.remove('no-border')
+    introSection.classList.remove('no-arrow')
+});
+
 
 

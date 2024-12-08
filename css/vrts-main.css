@@ -9,8 +9,8 @@
 
     background-color: #000000;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.103) 1px, transparent 1px); 
+        linear-gradient(rgba(132, 146, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(140, 151, 255, 0.103) 1px, transparent 1px); 
     background-size: 20px 20px; 
     background-repeat: repeat; 
 }
