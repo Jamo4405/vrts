@@ -32,7 +32,24 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     font-size: 1.25vw;
+    background-color: #e8f0ff38;
     color:#ffffffd9;
+}
+
+.other-border {
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.other-border-tri {
+    width: 2.5vw;
+    height: 4vw;
+}
+
+.other-border-tri-f {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 0;
 }
 
 .grid-for-main {
@@ -43,7 +60,7 @@
     z-index: 10;
 }
 
-.intro, .middle {
+.intro {
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -106,17 +123,13 @@
     padding-left: 5%;
 }
 
-.middle {
-    min-height: 100vh;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.intro-image {
+    max-width: 100vw;
+    cursor: none;
 }
 
-.middle-text {
-    font-size: 2vw; 
-    text-align: center; 
+.main-image {
+    max-width: 100vw;
 }
 
 body, html {
@@ -132,8 +145,174 @@ body, html {
     align-items: center;
 }
 
+.dashboard {
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 7.5vh 0px;
+    cursor: none;
+}
+
+.middle-top-header, .middle-top-text {
+    margin: 0;
+    padding: 0;
+}
+
+.middle-top-header {
+    font-size: 1.8vw;
+    color: #ffffffb6;
+    padding-bottom: 1vw;
+    font-weight: 500;
+}
+
+.middle-top-text {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3vw;
+}
+
+.middle-top {
+    max-width: 40vw;
+    padding-left: 3.5vw;
+    padding-bottom: 25vh;
+}
+
+.middle-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3.5vw;
+}
+
+.mb-bold-text {
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+
+.mb-normal-text {
+    font-size: 1.1vw;
+}
+
+.ticket-mb {
+    max-width: 21vw;
+}
+
+.ticket-image {
+    width: 21vw;
+    height: 9vw;
+    border-radius: 1.5vw;
+    object-fit: cover; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+}
+
+.ticket-image:hover {
+    transform: scale(1.05);
+}
+
+.ticket-image-d {
+    width: 19vw;
+    height: 7.9w;
+    border-radius: 1.5vw;
+    object-fit: cover; 
+    overflow: hidden; 
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1vw;
+    transition: transform 0.3s ease; 
+}
+
+.ticket-image-d:hover {
+    transform: scale(1.05);
+}
+
+.middle-after {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0px;
+    cursor: none;
+}
+
+.middle-end {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+}
+
+.middle-end-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.middle-end-l {
+    padding: 0 2.5vw;
+}
+
+.middle-end-r {
+    padding: 0 2.5vw;
+}
+
+.middle-end-header {
+    font-size: 1.3vw;
+    color: #ffffffb6;
+    font-weight: 500;
+    padding: 0;
+}
+
+.middle-end-text {
+    font-size: 1.8vw;
+    padding: 0;
+    color: #ffffff;
+    font-weight: 500;
+    transition: transform 0.3s ease; 
+}
+
+.middle-end-text:hover {
+    transform: scale(1.1);
+}
+
+.the-logo-wwd {
+    padding-left: 3vw;
+    padding-top: 1vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.push-right {
+    padding-left: 65%;
+    display: flex;
+    flex-direction: row;
+}
+
+.end-image-div {
+    display: flex;
+    justify-content: center;
+}
+
+.the-end-image {
+    padding-top: 12.5vw;
+    width: 95%;
+    align-items: center;
+}
+
 @media (max-width: 1200px) {
 
+    .middle-top {
+
+        padding-bottom: 20vh;
+    }
+    
     .inner-text {
         font-size: 4vw;
         padding: 0 7.5vw;
@@ -205,4 +384,70 @@ body, html {
         padding-left: 3.5%;
     }
 
+    .middle-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ticket-mb {
+        max-width: 80vw;
+    }
+
+    .ticket-image {
+        width: 80vw;
+        height: 25vw;
+        border-radius: 1.5vw;
+        object-fit: cover; 
+        overflow: hidden; 
+        transition: transform 0.3s ease; 
+    }
+    
+    .ticket-image:hover {
+        transform: scale(1.05);
+    }
+    
+    .ticket-image-d {
+        width: 77vw;
+        height: 25w;
+        border-radius: 1.5vw;
+        object-fit: cover; 
+        overflow: hidden; 
+        border: 1px solid rgb(255, 255, 255);
+        padding: 1vw;
+        transition: transform 0.3s ease; 
+    }
+
+    .mb-bold-text {
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    
+    .mb-normal-text {
+        font-size: 4vw;
+        padding-bottom: 8vw;
+    }
+
+    .middle-after {
+        display: none;
+    }
+
+    .middle-top {
+        min-width: 80vw;
+        padding-left: 10vw;
+        padding-bottom: 10vw;
+    }
+
+    .middle-top-header {
+        font-size: 5vw;
+    }
+
+    .middle-top-text {
+        font-size: 7vw;
+    }
+
+    .middle-end {
+        padding-bottom: 0;
+    }
 }

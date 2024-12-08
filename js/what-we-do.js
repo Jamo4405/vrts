@@ -77,7 +77,7 @@ gsap.to('.logo-name', {
 });
 
 gsap.to('.the-logo', {
-    x: '7.5vw',
+    x: '2.4vw',
     scrollTrigger: {
         trigger: '.intro',
         start: 'top top',
@@ -101,7 +101,10 @@ gsap.to('.navbar-right', {
 
 const cursor = document.querySelector('.custom-cursor');
 const introSection = document.querySelector('.intro');
-const imageSection = document.querySelector('.intro-image')
+const imageSection = document.querySelector('.intro-image');
+const middleSection = document.querySelector('.middle');
+const afterSection = document.querySelector('.middle-after');
+const theEnd = document.querySelector('.middle-end');
 
 document.addEventListener('mousemove', (e) => {
     gsap.to(cursor, {
@@ -127,14 +130,45 @@ introSection.addEventListener('mouseleave', () => {
 imageSection.addEventListener('mouseenter', () => {
     cursor.textContent = 'Our solutions seamlessly integrate with any product, from clothing and pharmaceuticals to furniture.';
     cursor.classList.add('no-border')
-    introSection.classList.add('no-arrow')
     gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
 });
 
 imageSection.addEventListener('mouseleave', () => {
     gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
     cursor.classList.remove('no-border')
-    introSection.classList.remove('no-arrow')
+});
+
+middleSection.addEventListener('mouseenter', () => {
+    cursor.textContent = '✢';
+    gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
+    cursor.classList.add('other-border')
+});
+
+middleSection.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
+    cursor.classList.remove('other-border')
+});
+
+afterSection.addEventListener('mouseenter', () => {
+    cursor.textContent = '✺';
+    gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
+    cursor.classList.add('other-border-tri')
+});
+
+afterSection.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
+    cursor.classList.remove('other-border-tri')
+});
+
+theEnd.addEventListener('mouseenter', () => {
+    cursor.textContent = '✦';
+    gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
+    cursor.classList.add('other-border-tri-f')
+});
+
+theEnd.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
+    cursor.classList.remove('other-border-tri-f')
 });
 
 
