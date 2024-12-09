@@ -306,13 +306,73 @@ body, html {
     align-items: center;
 }
 
+.dpp-image {
+    max-height: 80vh;
+    border-radius: 2.5vh;
+    transition: transform 0.3s ease; 
+}
+
+.dpp-image:hover {
+    transform: scale(1.05);
+}
+
+.middle-after-top {
+    max-width: 40vw;
+    padding-top: 10vw;
+    padding-left: 3.5vw;
+    padding-bottom: 10vh;
+}
+
+.middle-after-section {
+    padding-left: 3.5vw;
+}
+
+.mb-r-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.ma-ticket {
+    max-width: 50vw;
+    padding-left: 5vw;
+}
+
+.ma-bold-text {
+    font-size: 1.7vw;
+    color: #ffffffb6;
+    font-weight: 500;
+    padding: 0;
+    margin:0;
+}
+
+.ma-normal-text {
+    font-size: 1.5vw;
+    padding: 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.ma-normal-text-bold {
+    font-size: 1.5vw;
+    padding: 0;
+    color: #ffffff;
+    font-weight: 600;
+    transition: transform 0.3s ease; 
+}
+
+.middle-after {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 @media (max-width: 1200px) {
 
     .middle-top {
 
         padding-bottom: 20vh;
     }
-    
+
     .inner-text {
         font-size: 4vw;
         padding: 0 7.5vw;
@@ -429,8 +489,60 @@ body, html {
         padding-bottom: 8vw;
     }
 
+    .dpp-image:hover {
+        transform: scale(1.02);
+    }
+
+    .ma-normal-text-bold {
+        font-size: 4vw;
+        padding: 0;
+        color: #ffffff;
+        font-weight: 600;
+        transition: transform 0.3s ease; 
+        padding-left: 7vw;
+    }
+
     .middle-after {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mb-r-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dpp-image {
+        padding: 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        max-width: calc(100% - 10vw); /* Accounts for padding */
+        height: auto; /* Maintains the aspect ratio */
+        display: block;
+        object-fit: contain; /* Ensures the image fits within the box without distortion */
+    }
+
+    .ma-ticket {
+        max-width: 50vw;
+    }
+    
+    .ma-bold-text {
+        padding-top: 5vw;
+        font-size: 5vw;
+        padding-left: 7.5vw;
+    }
+    
+    .ma-normal-text {
+        font-size: 4vw;
+        padding-left: 7.5vw;
+    }
+
+    .ma-ticket {
+        max-width: none;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .middle-top {
