@@ -106,6 +106,22 @@ const middleSection = document.querySelector('.middle');
 const afterSection = document.querySelector('.middle-after');
 const theEnd = document.querySelector('.middle-end');
 
+// Function to initialize cursor position and visibility
+function initializeCursor() {
+    // Set initial cursor text and state for intro section
+    cursor.textContent = '↓';
+    gsap.set(cursor, { 
+        opacity: 1, 
+        scale: 1.2,
+        x: window.innerWidth / 2,  // Center of the screen
+        y: window.innerHeight / 2 
+    });
+    introSection.classList.add('no-arrow');
+}
+
+// Run initialization when the page loads
+window.addEventListener('load', initializeCursor);
+
 document.addEventListener('mousemove', (e) => {
     gsap.to(cursor, {
         x: e.clientX,
@@ -118,13 +134,11 @@ introSection.addEventListener('mouseenter', () => {
     cursor.textContent = '↓';
     gsap.to(cursor, { opacity: 1, scale: 1.2, duration: 0.2 });
     introSection.classList.add('no-arrow')
-
 });
 
 introSection.addEventListener('mouseleave', () => {
     gsap.to(cursor, { opacity: 0, scale: 1, duration: 0.2 });
     introSection.classList.remove('no-arrow')
-
 });
 
 imageSection.addEventListener('mouseenter', () => {
