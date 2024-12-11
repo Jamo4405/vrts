@@ -3,20 +3,18 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="VERITAS: Revolutionizing supply chain transparency, product authenticity, and brand experience through Digital Product Passports.">
-        <meta name="keywords" content="VERITAS, Digital Product Passport, supply chain transparency, product authenticity, blockchain, brand experience">
+        <meta name="description" content="VERITAS empowers brands with Digital Product Passports, enhancing supply chain transparency, ensuring product authenticity, and creating seamless consumer experiences. Powered by blockchain, VERITAS enables real-time traceability and verification, helping luxury brands and manufacturers build trust, increase brand loyalty, and optimize operations in a transparent, sustainable ecosystem.">
+        <meta name="keywords" content="VERITAS Digital Product Passport, Digital product traceability VERITAS, VERITAS supply chain transparency, Blockchain-powered product passports VERITAS, VERITAS product authenticity solution, Digital Product Passport for luxury brands VERITAS, VERITAS blockchain for supply chain visibility, VERITAS: Enhancing product transparency with Digital Passports, VERITAS digital identification for products, VERITAS consumer brand transparency technology">
         <meta name="author" content="VERITAS Team, Digital Product Passport, Digital Experience Engineers">
 
 
         <title>VERITAS</title>
-
         <link rel="icon" type="image/png" href="assets/blaack-portcullis-32.png">
 
         <link rel="stylesheet" href="css/vrts-main.css">
         <link rel="stylesheet" href="css/vrts-button.css">
         <link rel="stylesheet" href="css/vrts-navbar.css">
         <link rel="stylesheet" href="css/cursor.css">
-        <link rel="stylesheet" href="css/coming-soon.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +26,12 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Barcode+39&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Barcode+39&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
 
     </head>
     <body>
         <header class="navbar">
-            <a href='index.html' class='menu-link'>
+            <a href='home' class='menu-link'>
                 <div class="navbar-left with-border">
                     <img src="assets/logo.png" alt="VERITAS logo representing digital product passports for supply chain transparency" class="the-logo">
                     <div class="logo-name">VERITAS</div>
@@ -60,9 +58,9 @@
 
                 <div class="menu-block-1">
                     <div class='menu-title'>SOLUTIONS</div>
-                        <a href='what-we-do.html' class='menu-link'><div class='menu-item physical'>Physical</div></a>
-                        <a href='coming-soon.html' class='menu-link'><div class='menu-item digital'>Digital</div></a> 
-                        <a href='coming-soon.html' class='menu-link'><div class='menu-item finance'>Finance</div></a>
+                    <a href='what-we-do' class='menu-link'><div class='menu-item physical'>Physical</div></a>
+                    <a href='coming-soon' class='menu-link'><div class='menu-item digital'>Digital</div></a> 
+                    <a href='coming-soon' class='menu-link'><div class='menu-item finance'>Finance</div></a>
                 </div>
     
                 <div class="menu-block-2">
@@ -76,32 +74,38 @@
                     <div class='menu-item mission'>The Mission</div>
                     <div class='menu-item philosophy'>Our Philosophy</div>
                 </div>
+    
             </section>
 
-            <div class="container">
-
-                <section class="wrapper-404">
-                    <h1>
-                        Coming Soon
-                    </h1>
-                </section>
-                <section class="outro">
-                    <h1>
-                        ... stay tuned!
-                    </h1>
-                </section>
-
-            </div>
-
+            <section class="main-section">
+                <div class="left-section">
+                    <div class="text-container">
+                        <p style="padding: 0px; margin: 0px;">
+                            <span class="normal-large">Making</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="bar-code">makingvrts</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
+                        <p style="padding: 0px; margin: 0px;">
+                            <span class="bold-large">Supply Chains</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
+                        <p style="padding: 0px; margin: 0px;">
+                            <span class="bar-code">supply</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="normal-large">Transparent</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <p class="small-text-container">
+                        <span class="bold-small">VERITAS </span>
+                        <span class="normal-small">is solving 3 problems: product authenticity, supply chain transparency, and brand experience all through a single solution—the Digital Product Passport.</span>
+                    </p>
+                    <a href='what-we-do.html'><button class="shiny-cta"><span>Explore VERITAS</span></button></a>
+                </div>
+            </section>
         </main>
+
     </body>
-
-
-
     <script src="js/vrts-sizes.js"></script>
     <script src="js/vrts-menu.js"></script>
     <script src="js/vrts-title.js"></script>
     <script src="js/cursor.js"></script>
-    <script src="js/coming-soon.js"></script>
-
 </html>
